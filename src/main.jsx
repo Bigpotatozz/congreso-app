@@ -2,10 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Inicio from "./components/inicio/inicio.jsx";
+import Inicio from "./components/inicio/Inicio.jsx";
 import Participantes from "./components/Participantes.jsx";
 import Registro from "./components/Registro.jsx";
-import { Gafete } from "./components/gafete.jsx";
+import { Gafete } from "./components/Gafete.jsx";
 
 const router = createBrowserRouter([
   {
