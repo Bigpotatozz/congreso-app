@@ -8,14 +8,16 @@ const Participantes = () => {
   const [busqueda, setBusqueda] = useState("");
 
   const obtenerParticipantes = async () => {
-    const response = await axios.get("http://localhost:3000/api/listado");
+    const response = await axios.get(
+      "https://congreso-app-back-3.onrender.com/api/listado"
+    );
     console.log(response.data.participantes);
     setParticipantes(response.data.participantes);
   };
 
   const buscarParticipante = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/listadoP/?query=${busqueda}`
+      `https://congreso-app-back-3.onrender.com/api/listadoP/?query=${busqueda}`
     );
     console.log(response);
     setParticipantes(response.data.participante);
@@ -29,6 +31,12 @@ const Participantes = () => {
   useEffect(() => {
     obtenerParticipantes();
   }, []);
+
+  useEffect(() => {
+    if (location.state?.refresh) {
+      obtenerParticipantes();
+    }
+  }, [location.state]);
 
   return (
     <div style={{ padding: "20px" }}>
