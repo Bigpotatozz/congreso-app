@@ -31,7 +31,7 @@ const Registro = () => {
 
   const postParticipante = async (participante) => {
     const response = await axios.post(
-      "https://congreso-app-back-3.onrender.com/api/registro",
+      "https://congreso-app-back-4.onrender.com/api/registro",
       {
         participante: participante,
       }

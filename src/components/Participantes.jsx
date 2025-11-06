@@ -9,7 +9,7 @@ const Participantes = () => {
 
   const obtenerParticipantes = async () => {
     const response = await axios.get(
-      "https://congreso-app-back-3.onrender.com/api/listado"
+      "https://congreso-app-back-4.onrender.com/api/listado"
     );
     console.log(response.data.participantes);
     setParticipantes(response.data.participantes);
@@ -17,7 +17,7 @@ const Participantes = () => {
 
   const buscarParticipante = async () => {
     const response = await axios.get(
-      `https://congreso-app-back-3.onrender.com/api/listadoP/?query=${busqueda}`
+      `https://congreso-app-back-4.onrender.com/api/listadoP/?query=${busqueda}`
     );
     console.log(response);
     setParticipantes(response.data.participante);

@@ -9,7 +9,7 @@ export const Gafete = () => {
 
   const obtenerUsuario = async (id) => {
     const response = await axios.get(
-      `https://congreso-app-back-3.onrender.com/api/participante/${id}`
+      `https://congreso-app-back-4.onrender.com/api/participante/${id}`
     );
     setParticipante(response.data.participante[0]);
   };
