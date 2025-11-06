@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import Inicio from "./components/inicio/inicio";
+import Inicio from "./components/inicio/Inicio";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Outlet } from "react-router";
 
